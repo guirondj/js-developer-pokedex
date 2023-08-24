@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<fonte>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Css Global -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Script Geral -->
+    <script src="pokemonModel.js" defer></script>
+    <script src="pokeApi.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <!-- fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+        <section class="content">
+            <h2>Pokedex</h2>
+            <ol id="pokemonList" class="pokemons">   
+            </ol>
+
+            <div class="pagination">
+            <button id="loadMoreButton" type="button">
+                Load More
+            </button> 
+            </div>
+
+            
+        </section>
+    
+
+</body>
+</html>
