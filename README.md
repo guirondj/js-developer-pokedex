@@ -1,3 +1,3 @@
 # js-developer-pokedex
 
-como o desafio adicionei as habilidades dos pokemons.
+Como o desafio proposto foi adicionado as habilidades dos pokemons.
