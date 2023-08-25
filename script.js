@@ -1,7 +1,7 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 const maxRecords= 151
-const limit = 1
+const limit = 50
 let offset = 0
 
 function loadPokemonItens(offset , limit){
@@ -13,14 +13,14 @@ function loadPokemonItens(offset , limit){
         <span class="nome"> ${pokemon.name} </span>
         <div class="detail ">
             <ol class="types">
-            ${pokemon.types.map((type) => ` <li class="type ${type}">${type}</li>`).join('')}   
+            ${pokemon.types.map((type) => ` <li class="type ${type}">${type}</li>`).join('')}  
+            
+            ${pokemon.habilidades.map((ability) => ` <li class="type ability">${ability}</li>`).join('')}
         
             </ol>
             <img src=" ${pokemon.photo} " alt="${pokemon.name}">
 
-        </div>
-
-        <button class="abl" id="habilidadesPoke" onclick="loadHabilidades()" >habilidades</button>       
+        </div>      
 
         </li>
     `
@@ -47,21 +47,4 @@ loadMoreButton.addEventListener('click', () => {
        loadPokemonItens(offset, limit) 
     }
     
-})
-
-const habilidadesButton = document.getElementById('habilidadesPoke')
-
-function loadHabilidades(){
-
-    pokeApi.getPokemons(offset , limit).then((pokemons = []) => {
-        pokemonList.innerHTML += pokemons.map((pokemon)=>`
-        ${pokemon.habilidades.map((ability) => ` <li class="type">${ability}</li>`).join('')}
-    `
-    ).join('')
-
-    pokemonList.innerHTML += newHtml
-
-    })
-}
-   
-   //${pokemon.habilidades.map((ability) => ` <li class="type ${ability}">${ability}</li>`).join('')}
+})    

@@ -171,6 +171,11 @@ section{
     box-shadow: 1px 5px 12px black;
 }
 
+.ability{
+    border: 1px solid rgba(255, 0, 0, 0.727);
+    background-color: #6e5896;
+    filter: brightness(1.1);
+}
 @media screen and (min-width: 992px){
     section{
         max-width: 992px;
